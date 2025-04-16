@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8"/>
+    <title>Traffic Management </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc."
+          name="description"/>
+    <meta content="Coderthemes" name="author"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- App favicon -->
+    <link rel="shortcut icon"
+          href="../../base/static/adminResources/image/favicon.ico">
+
+    <!-- Plugins css -->
+    <link href="../../static/adminResources/css/flatpickr.min.css"
+          rel="stylesheet" type="text/css"/>
+    <link href="../../static/adminResources/css/selectize.bootstrap3.css"
+          rel="stylesheet" type="text/css"/>
+
+    <!-- App css -->
+    <link href="../../static/adminResources/css/bootstrap.min.css"
+          rel="stylesheet" type="text/css"
+          id="bs-default-stylesheet"/>
+    <link href="../../static/adminResources/css/app.min.css" rel="stylesheet"
+          type="text/css"
+          id="app-default-stylesheet"/>
+
+    <link href="../../static/adminResources/css/bootstrap-dark.min.css"
+          rel="stylesheet" type="text/css"
+          id="bs-dark-stylesheet"/>
+    <link href="../../static/adminResources/css/app-dark.min.css"
+          rel="stylesheet" type="text/css"
+          id="app-dark-stylesheet"/>
+
+    <!-- icons -->
+    <link href="../../static/adminResources/css/icons.min.css" rel="stylesheet"
+          type="text/css"/>
+
+</head>
+
+<body class="loading"
+      data-layout='{"mode": "light", "width": "fluid", "menuPosition": "fixed", "sidebar": { "color": "light", "size": "default", "showuser": false}, "topbar": {"color": "dark"}, "showRightSidebarOnPageLoad": true}'>
+
+<!-- Begin page -->
+<div id="wrapper">
+
+    <!-- Topbar Start -->
+
+    {% include 'admin/header.html' %}
+
+    <!-- end Topbar -->
+
+    <!-- ========== Left Sidebar Start ========== -->
+    {% include 'admin/menu.html' %}
+    <!-- Left Sidebar End -->
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+
+    <div class="content-page">
+        <div class="content">
+
+            <!-- Start Content-->
+            <div class="container-fluid">
+
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box">
+                            <div class="page-title-right">
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <div class="input-group input-group-sm">
+                                            <input type="text"
+                                                   class="form-control border"
+                                                   id="dash-daterange">
+                                            <div class="input-group-append">
+                                                        <span class="input-group-text bg-blue border-blue text-white">
+                                                            <i class="mdi mdi-calendar-range"></i>
+                                                        </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                            <h4 class="page-title">Home</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title -->
+
+                <div class="row">
+                    <div class="col-md-6 col-xl-3">
+                        <div class="widget-rounded-circle card-box">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div>
+                                        <center>
+                                            <i class="fa fa-car font-28 avatar-title text-primary"></i>
+                                        </center>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div>
+                                        <h3 class="mt-1"><span
+                                                data-plugin="counterup">{{ entry }}</span>
+                                        </h3>
+                                        <p class="text-muted mb-1 text-truncate">
+                                            Total Entry</p>
+                                    </div>
+                                </div>
+                            </div> <!-- end row-->
+                        </div> <!-- end widget-rounded-circle-->
+                    </div> <!-- end col-->
+
+                    <div class="col-md-6 col-xl-3">
+                        <div class="widget-rounded-circle card-box">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div>
+                                        <center>
+                                            <i class="fa fa-car-side font-26 avatar-title text-success"></i>
+                                        </center>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div>
+                                        <h3 class=" mt-1"><span
+                                                data-plugin="counterup">{{ exit }}</span>
+                                        </h3>
+                                        <p class="text-muted mb-1 text-truncate">
+                                            Total Exit</p>
+                                    </div>
+                                </div>
+                            </div> <!-- end row-->
+                        </div> <!-- end widget-rounded-circle-->
+                    </div> <!-- end col-->
+
+
+                </div>
+                <!-- end row-->
+
+
+                <!-- end row -->
+
+
+                <!-- end row -->
+
+            </div> <!-- container -->
+
+        </div> <!-- content -->
+
+        <!-- Footer Start -->
+
+
+        {% include 'admin/footer.html' %}
+
+
+        <!-- end Footer -->
+
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+
+
+</div>
+<!-- END wrapper -->
+
+<!-- Vendor js -->
+<script src="../../static/adminResources/js/vendor.min.js"></script>
+
+<!-- Plugins js-->
+<script src="../../static/adminResources/js/flatpickr.min.js"></script>
+<script src="../../static/adminResources/js/apexcharts.min.js"></script>
+
+<script src="../../static/adminResources/js/selectize.min.js"></script>
+
+<!-- Dashboar 1 init js-->
+<script src="../../static/adminResources/js/dashboard-1.init.js"></script>
+
+<!-- App js-->
+<script src="../../static/adminResources/js/app.min.js"></script>
+
+</body>
+</html>

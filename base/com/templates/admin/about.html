@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc."
+          name="description"/>
+    <meta content="Coderthemes" name="author"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- App favicon -->
+    <link rel="shortcut icon"
+          href="../../base/static/adminResources/image/favicon.ico">
+
+    <!-- App css -->
+    <link href="../../static/adminResources/css/bootstrap.min.css"
+          rel="stylesheet" type="text/css" id="bs-default-stylesheet"/>
+    <link href="../../static/adminResources/css/app.min.css" rel="stylesheet"
+          type="text/css" id="app-default-stylesheet"/>
+
+    <link href="../../static/adminResources/css/bootstrap-dark.min.css"
+          rel="stylesheet" type="text/css" id="bs-dark-stylesheet"/>
+    <link href="../../static/adminResources/css/app-dark.min.css"
+          rel="stylesheet" type="text/css" id="app-dark-stylesheet"/>
+
+    <!-- icons -->
+    <link href="../../static/adminResources/css/icons.min.css" rel="stylesheet"
+          type="text/css"/>
+
+</head>
+
+<body class="loading">
+
+<!-- Begin page -->
+<div id="wrapper">
+
+    <!-- Topbar Start -->
+    {% include 'admin/header.html' %}
+    <!-- end Topbar -->
+
+    <!-- ========== Left Sidebar Start ========== -->
+    {% include 'admin/menu.html' %}
+    <!-- Left Sidebar End -->
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+
+    <div class="content-page">
+        <div class="content">
+
+            <!-- Start Content-->
+            <div class="container-fluid">
+
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-box">
+                            <div class="row">
+
+                                <div class="card-box">
+                                    <center>
+                                        <div class="col-6">
+
+                                            <img
+                                                    src="../../static/adminResources/image/bgimg.jpg" alt="sample"
+                                                    class="rounded mw-100">
+
+                                        </div>
+                                    </center>
+
+                                    <form action="/about">
+                                    <div class="col-12 p-3">
+                                        <h2 class="text-center">
+                                <span>About <span
+                                        style="color: #248afd">Us</span></span>
+                                        </h2>
+
+                                        <p class="text-justify text right">
+                                            A traffic management system is a system that uses various technologies to
+                                            monitor and manage traffic on roads and transportation routes. The primary
+                                            purpose of this system is to improve safety, reduce congestion and increase
+                                            efficiency of transportation.
+
+                                            The system generally includes a network of cameras, sensors and other
+                                            monitoring devices that capture real-time data on traffic conditions. This
+                                            data is then analyzed using artificial intelligence algorithms to provide
+                                            information on traffic flow, congestion, accidents etc. to traffic
+                                            management authorities.
+
+                                            The system can also be used to implement real time traffic control measures
+                                            such as dynamic traffic signal management, variable message signs to
+                                            optimize traffic flow and reduce congestion.
+
+                                            Overall, a traffic management system provides valuable insights to
+                                            transportation authorities to help them make informed decisions that improve
+                                            safety, efficiency, and the overall transportation experience for commuters.
+                                        </p>
+                                    </div>
+                                </form>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+                {% include 'admin/footer.html' %}
+            </div>
+        </div>
+        <!-- END wrapper -->
+        <!-- Right bar overlay-->
+        <div class="rightbar-overlay"></div>
+
+        <!-- Vendor js -->
+        <script src="../../static/adminResources/js/vendor.min.js"></script>
+
+        <!-- Plugin js-->
+        <script src="../../static/adminResources/js/parsley.min.js"></script>
+
+        <!-- Validation init js-->
+        <script src="../../static/adminResources/js/form-validation.init.js"></script>
+
+        <!-- App js -->
+        <script src="../../static/adminResources/js/app.min.js"></script>
+</body>
+</html>

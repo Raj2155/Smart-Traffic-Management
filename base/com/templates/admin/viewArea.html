@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>View Area</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc."
+          name="description"/>
+    <meta content="Coderthemes" name="author"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- App favicon -->
+    <link rel="shortcut icon"
+          href="../../base/static/adminResources/image/favicon.ico">
+
+    <!-- third party css -->
+    <link href="../../static/adminResources/css/dataTables.bootstrap4.min.css"
+          rel="stylesheet" type="text/css"/>
+    <link href="../../static/adminResources/css/responsive.bootstrap4.min.css"
+          rel="stylesheet" type="text/css"/>
+    <link href="../../static/adminResources/css/buttons.bootstrap4.min.css"
+          rel="stylesheet" type="text/css"/>
+    <link href="../../static/adminResources/css/select.bootstrap4.min.css"
+          rel="stylesheet" type="text/css"/>
+    <!-- third party css end -->
+
+    <!-- App css -->
+    <link href="../../static/adminResources/css/bootstrap.min.css"
+          rel="stylesheet" type="text/css"
+          id="bs-default-stylesheet"/>
+    <link href="../../static/adminResources/css/app.min.css" rel="stylesheet"
+          type="text/css"
+          id="app-default-stylesheet"/>
+
+    <link href="../../static/adminResources/css/bootstrap-dark.min.css"
+          rel="stylesheet" type="text/css"
+          id="bs-dark-stylesheet"/>
+    <link href="../../static/adminResources/css/app-dark.min.css"
+          rel="stylesheet" type="text/css"
+          id="app-dark-stylesheet"/>
+
+    <!-- icons -->
+    <link href="../../static/adminResources/css/icons.min.css" rel="stylesheet"
+          type="text/css"/>
+
+</head>
+
+<body class="loading">
+
+<!-- Begin page -->
+<div id="wrapper">
+
+    <!-- Topbar Start -->
+    {% include 'admin/header.html' %}
+    <!-- end Topbar -->
+
+    <!-- ========== Left Sidebar Start ========== -->
+    {% include 'admin/menu.html' %}
+    <!-- Left Sidebar End -->
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+
+    <div class="content-page">
+        <div class="content">
+
+            <!-- Start Content-->
+            <div class="container-fluid">
+
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box">
+                            <div class="page-title-right">
+
+                            </div>
+                            <h4 class="page-title">Area Details</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title -->
+
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+
+
+                                <table id="basic-datatable"
+                                       class="table dt-responsive nowrap w-100">
+                                    <thead>
+                                    <tr>
+                                        <th>Area Name</th>
+                                        <th>Area Code</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for area_vo_list in area_vo_list %}
+                                        <tr>
+                                            <td>{{ area_vo_list['area_name'] }}</td>
+                                            <td>{{ area_vo_list['area_code'] }}</td>
+                                            <td>
+                                                <a href="/edit_area?area_id={{ area_vo_list['area_id'] }}">
+                                                    <i class="mdi mdi-pencil lead"></i>
+                                                </a>
+                                                <a href="/delete_area?area_id={{ area_vo_list ['area_id'] }}">
+                                                    <i class="mdi mdi-delete lead ml-2 text-danger"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+
+                                    </tbody>
+                                </table>
+
+
+                            </div> <!-- end card body-->
+                        </div> <!-- end card -->
+                    </div><!-- end col-->
+                </div>
+                <!-- end row-->
+
+            </div> <!-- container -->
+
+        </div> <!-- content -->
+
+        <!-- Footer Start -->
+
+        {% include 'admin/footer.html' %}
+
+        <!-- end Footer -->
+
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+
+
+</div>
+<!-- END wrapper -->
+
+<!-- Vendor js -->
+<script src="../../static/adminResources/js/vendor.min.js"></script>
+
+<!-- third party js -->
+<script src="../../static/adminResources/js/jquery.dataTables.min.js"></script>
+<script src="../../static/adminResources/js/dataTables.bootstrap4.min.js"></script>
+<script src="../../static/adminResources/js/dataTables.responsive.min.js"></script>
+<script src="../../static/adminResources/js/responsive.bootstrap4.min.js"></script>
+<script src="../../static/adminResources/js/dataTables.buttons.min.js"></script>
+<script src="../../static/adminResources/js/buttons.bootstrap4.min.js"></script>
+<script src="../../static/adminResources/js/buttons.html5.min.js"></script>
+<script src="../../static/adminResources/js/buttons.flash.min.js"></script>
+<script src="../../static/adminResources/js/buttons.print.min.js"></script>
+<script src="../../static/adminResources/js/dataTables.keyTable.min.js"></script>
+<script src="../../static/adminResources/js/dataTables.select.min.js"></script>
+<script src="../../static/adminResources/js/pdfmake.min.js"></script>
+<script src="../../static/adminResources/js/vfs_fonts.js"></script>
+<!-- third party js ends -->
+
+<!-- Datatables init -->
+<script src="../../static/adminResources/js/datatables.init.js"></script>
+
+<!-- App js -->
+<script src="../../static/adminResources/js/app.min.js"></script>
+
+</body>
+</html>
