@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Edit Area</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc."
+          name="description"/>
+    <meta content="Coderthemes" name="author"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- App favicon -->
+    <link rel="shortcut icon"
+          href="../../base/static/adminResources/image/favicon.ico">
+
+    <!-- App css -->
+    <link href="../../static/adminResources/css/bootstrap.min.css"
+          rel="stylesheet" type="text/css"
+          id="bs-default-stylesheet"/>
+    <link href="../../static/adminResources/css/app.min.css" rel="stylesheet"
+          type="text/css"
+          id="app-default-stylesheet"/>
+
+    <link href="../../static/adminResources/css/bootstrap-dark.min.css"
+          rel="stylesheet" type="text/css"
+          id="bs-dark-stylesheet"/>
+    <link href="../../static/adminResources/css/app-dark.min.css"
+          rel="stylesheet" type="text/css"
+          id="app-dark-stylesheet"/>
+
+    <!-- icons -->
+    <link href="../../static/adminResources/css/icons.min.css" rel="stylesheet"
+          type="text/css"/>
+
+</head>
+
+<body class="loading">
+
+<!-- Begin page -->
+<div id="wrapper">
+
+    <!-- Topbar Start -->
+    {% include 'admin/header.html' %}
+    <!-- end Topbar -->
+
+    <!-- ========== Left Sidebar Start ========== -->
+    {% include 'admin/menu.html' %}
+    <!-- Left Sidebar End -->
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+
+    <div class="content-page">
+        <div class="content">
+
+            <!-- Start Content-->
+            <div class="container-fluid">
+
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box">
+                            <div class="page-title-right">
+                            </div>
+                            <h4 class="page-title">Edit Area</h4>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- end page title -->
+
+
+                <!-- end row -->
+
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-box">
+
+
+                            <form action="/update_area" method="post">
+                                {% for area_vo_list in area_vo_list %}
+                                    <input type="hidden" name="area_id"
+                                           value="{{ area_vo_list['area_id'] }}">
+                                    <div class="form-group">
+                                        <label for="area">Area:</label>
+                                        <input type="text" class="form-control"
+                                               name="area_name"
+                                               value="{{ area_vo_list['area_name'] }}"
+                                               required="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="areacode">Area
+                                            Code:</label>
+                                        <input type="text" class="form-control"
+                                               name="area_code"
+                                               value="{{ area_vo_list['area_code'] }}"
+                                               required="">
+                                    </div>
+                                    <div class="form-group mb-0">
+                                        <input type="submit"
+                                               class="btn btn-success"
+                                               value="Submit">
+                                    </div>
+                                {% endfor %}
+
+                            </form>
+                        </div> <!-- end card-box-->
+                    </div> <!-- end col-->
+                </div>
+
+
+            </div> <!-- container -->
+
+        </div> <!-- content -->
+
+        <!-- Footer Start -->
+
+
+        {% include 'admin/footer.html' %}
+
+
+        <!-- end Footer -->
+
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+
+
+</div>
+<!-- END wrapper -->
+<!-- Right bar overlay-->
+<div class="rightbar-overlay"></div>
+
+<!-- Vendor js -->
+<script src="../../static/adminResources/js/vendor.min.js"></script>
+
+<!-- Plugin js-->
+<script src="../../static/adminResources/js/parsley.min.js"></script>
+
+<!-- Validation init js-->
+<script src="../../static/adminResources/js/form-validation.init.js"></script>
+
+<!-- App js -->
+<script src="../../static/adminResources/js/app.min.js"></script>
+
+</body>
+</html>
